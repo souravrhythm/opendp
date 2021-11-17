@@ -70,7 +70,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lib_dll
-          path: rust/target/x86_64-pc-windows-gnu/release/opendp_ffi.dll
+          path: rust/target/x86_64-pc-windows-gnu/release/opendp.dll
 
 
   python-pre-publish-mac:
@@ -87,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lib_dylib
-          path: rust/target/release/libopendp_ffi.dylib
+          path: rust/target/release/libopendp.dylib
 
 
   python-pre-publish-linux:
@@ -108,7 +108,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lib_so
-          path: rust/target/release/libopendp_ffi.so
+          path: rust/target/release/libopendp.so
 
 
   python-publish:
