@@ -19,6 +19,7 @@ statrs = "0.13.0"
 rug = { version = "1.9.0", default-features = false, features = ["integer", "float", "rand"], optional = true }
 gmp-mpfr-sys = { version = "=1.2.4", default-features = false, features = ["mpfr"], optional = true }
 openssl = { version = "0.10.29", features = ["vendored"], optional = true }
+opendp_derive = { path = "opendp_derive", optional = true }
 
 lazy_static = { version = "1.4.0", optional = true }
 
@@ -39,7 +40,7 @@ use-system-libs = ["use-mpfr", "gmp-mpfr-sys/use-system-libs"]
 # for plotting in unit tests
 test-plot = ["vega_lite_4"]
 
-ffi = ["lazy_static"]
+ffi = ["lazy_static", "opendp_derive"]
 bindings-python = ["ffi"]
 
 [build-dependencies]
